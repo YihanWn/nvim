@@ -38,7 +38,7 @@ require("lazy").setup(
 		require("plugins.lualine"),
 
 		-- Adds git related signs to the gutter, as well as utilities for managing changes
-		require("plugins.gitsigns"),
+		require("plugins.git"),
 
 		-- add a file explorer to neovim
 		-- config of neo-tree.nvim
@@ -87,7 +87,7 @@ require("lazy").setup(
 
 		-- Shows how to use the DAP plugin to debug your code.
 		-- config of nvim-dap
-		require("plugins.debug"),
+		-- require("plugins.debug"),
 
 		-- Add indentation guides even on blank lines
 		-- config of indent-blankline.nvim
@@ -95,7 +95,7 @@ require("lazy").setup(
 
 		-- 根据文件类型, 静态分析代码
 		-- config of nvim-lint
-		-- require 'plugins.lint',
+		require("plugins.lint"),
 
 		-- auto pairs for parentheses '{', '[', '(', '"', "'"
 		-- config of nvim-autopairs
@@ -108,7 +108,7 @@ require("lazy").setup(
 
 		require("plugins.barbecue"),
 
-		require("plugins.alpha-nvim"),
+		-- require("plugins.alpha-nvim"),
 
 		require("plugins.illuminate"),
 
@@ -118,11 +118,9 @@ require("lazy").setup(
 
 		require("plugins.multicursor"),
 
-		require("plugins.lazygit"),
-
 		-- add own plugins to `lua/custom/plugins/*.lua` to get going.
 		--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-		{ import = "custom.plugins" },
+		-- { import = "custom.plugins" },
 	},
 	-- NOTE: Lazy Options
 	{

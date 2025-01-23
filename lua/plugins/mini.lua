@@ -2,6 +2,7 @@
 -- mini.ai 增强 a, i 的功能
 return {
 	"echasnovski/mini.nvim",
+	event = "VeryLazy",
 	config = function()
 		-- Better Around/Inside textobjects
 		--

@@ -15,8 +15,10 @@
 -- config. This will add also the recommended keymaps.
 
 return {
+	-- NOTE: GitSigns Plugin
 	{
 		"lewis6991/gitsigns.nvim",
+		event = "VeryLazy",
 		opts = {
 			signs = {
 				add = { text = "+" },
@@ -76,6 +78,28 @@ return {
 				map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "[T]oggle git show [b]lame line" })
 				map("n", "<leader>tD", gitsigns.toggle_deleted, { desc = "[T]oggle git show [D]eleted" })
 			end,
+		},
+	},
+	-- NOTE: LazyGit Plugins
+	{
+		"kdheepak/lazygit.nvim",
+		lazy = true,
+		event = "VeryLazy",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		},
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		-- setting the keybinding for LazyGit with 'keys' is recommended in
+		-- order to load the plugin when the command is run for the first time
+		keys = {
+			{ "<leader>lg", "<cmd>LazyGit<CR>", desc = "[L]azy[G]it" },
 		},
 	},
 }

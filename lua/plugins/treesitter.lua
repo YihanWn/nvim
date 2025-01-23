@@ -4,6 +4,7 @@
 -- treesitter-textobjects 语法对象选择, 例如选择函数, 类等
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-treesitter/playground",
 		"nvim-treesitter/nvim-treesitter-textobjects",

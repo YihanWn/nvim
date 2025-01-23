@@ -5,7 +5,7 @@ return {
 	{
 		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
 		-- used for completion, annotations and signatures of Neovim apis
-		"folke/lazydev.nvim",
+		"folke/lazydev.nvim", -- not use neodev
 		ft = "lua",
 		opts = {
 			library = {
@@ -25,7 +25,6 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			"folke/neoconf.nvim",
-			"folke/neodev.nvim",
 			"nvimdev/lspsaga.nvim",
 
 			-- Useful status updates for LSP.
@@ -35,6 +34,8 @@ return {
 			-- Allows extra capabilities provided by nvim-cmp
 			"hrsh7th/cmp-nvim-lsp",
 		},
+		cmd = { "Mason", "Neoconf" }, -- VeryLazy 时有些命令无法使用
+		event = { "BufReadPost", "BufNewFile" }, -- read a file or create a new file 加载 LSP 插件
 		config = function()
 			-- In general, you have a "server" which is some tool built to understand a particular
 			-- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
@@ -215,7 +216,6 @@ return {
 
 			-- NOTE: setup before lspconfig
 			require("neoconf").setup()
-			require("neodev").setup()
 
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install

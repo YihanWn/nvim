@@ -2,10 +2,10 @@ return {
 	-- j,k 速度逐渐加快
 	-- {
 	-- 	"rhysd/accelerated-jk",
-	-- 	config = function()
-	-- 		vim.keymap.set("n", "j", "<Plug>(accelerated_jk_gj)")
-	-- 		vim.keymap.set("n", "k", "<Plug>(accelerated_jk_gk)")
-	-- 	end,
+	-- 	keys = {
+	--			{"j", "<Plug>(accelerated_jk_gj)", desc = "accelerated-jk j"},
+	--			{"k", "<Plug>(accelerated_jk_gk)", desc = "accelerated-jk k"},
+	--		}
 	-- },
 
 	-- 重新打开文件时,光标定位到上次关闭时的位置
@@ -17,6 +17,7 @@ return {
 	-- 拼写检查
 	-- {
 	-- 	"kamykn/spelunker.vim",
+	-- 	event = "VeryLazy",
 	-- 	config = function()
 	-- 		vim.g.spelunker_check_type = 2
 	-- 	end,
@@ -24,6 +25,7 @@ return {
 	-- Markdown 预览插件, 使用 :Glow 预览
 	{
 		"ellisonleao/glow.nvim",
+		event = "VeryLazy",
 		config = true,
 	},
 

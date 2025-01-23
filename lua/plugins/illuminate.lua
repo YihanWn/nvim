@@ -4,6 +4,7 @@
 -- default configuration
 return {
 	"RRethy/vim-illuminate",
+	event = "VeryLazy",
 	config = function()
 		require("illuminate").configure({
 			-- providers: provider used to get references in the buffer, ordered by priority
@@ -61,5 +62,6 @@ return {
 			-- case_insensitive_regex: sets regex case sensitivity
 			case_insensitive_regex = false,
 		})
-	end
+	end,
 }
+

@@ -2,6 +2,7 @@
 -- 顶部显示最近打开的文件
 return {
 	"akinsho/bufferline.nvim",
+	event = "VeryLazy",
 	opts = {
 		options = {
 			-- 使用 nvim 内置 lsp
