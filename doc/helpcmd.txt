@@ -1,0 +1,10 @@
+lua
+- https://learnxinyminutes.com/docs/lua/
+
+how Neovim integrates Lua
+- :help lua-guide
+- (or HTML version): https://neovim.io/doc/user/lua-guide.html
+
+neovim
+- :Tutor
+
