@@ -27,96 +27,45 @@ require("lazy").setup(
 	{
 		"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
-		-- keep nvim state
-		require("plugins.persistence"),
+		-- UI Plugins
+		-- require("plugins.ui.alpha-nvim"), -- UI for neovim
+		require("plugins.ui.barbecue"), -- show cursor position in the statusline
+		require("plugins.ui.bufferline"), -- add a bufferline to neovim
+		require("plugins.ui.colorscheme"), -- config of theme: tokyonight, gruvbox, cobalt2
+		require("plugins.ui.lualine"), -- add a statusline to neovim
+		require("plugins.ui.neo-tree"), -- add a file explorer to neovim
+		require("plugins.ui.noice"), -- replaces the UI for messages, cmdline and the popupmenu
 
-		-- config of theme: tokyonight, gruvbox, cobalt2
-		require("plugins.colorscheme"),
+		-- Language Plugins
+		require("plugins.language.lsp"), -- used for completion, annotations and signatures of Neovim apis
+		require("plugins.language.autocmp"), -- Autocompletion
+		require("plugins.language.treesitter"), -- Highlight, edit, and navigate code
+		require("plugins.language.autoformat"), -- Autoformat
+		-- require("plugins.language.debug"),-- DAP plugin to debug code.
+		require("plugins.language.lint"), -- Linting and fixing code
 
-		-- add a statusline to neovim
-		-- config of lualine.nvim
-		require("plugins.lualine"),
+		-- Utils Plugins
+		-- require("plugins.utils.accelerated"), -- Accelerated JK motions
+		require("plugins.utils.autopairs"), -- auto pairs for parentheses '{', '[', '(', '"', "'"
+		require("plugins.utils.comment"), -- Highlight todo, notes, etc in comments; convinient to add comments
+		require("plugins.utils.flash"), -- quick move plugin
+		require("plugins.utils.git"), -- Adds git related signs to the gutter, as well as utilities for managing changes
+		require("plugins.utils.glow"),
+		require("plugins.utils.illuminate"),
+		require("plugins.utils.indent_line"), -- show indent lines
+		require("plugins.utils.lastplace"), -- open the last edited position
+		require("plugins.utils.mini"), -- Collection of various small independent plugins/modules
+		require("plugins.utils.multicursor"), -- multiple cursors
+		require("plugins.utils.persistence"), -- keep nvim state
+		-- require("plugins.utils.spelunker"), -- spell check
+		require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
+		require("plugins.utils.vim-smoothie"), -- Smooth scrolling
+		require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
+		-- require("plugins.utils.window-picker"), -- quick move between windows
 
-		-- Adds git related signs to the gutter, as well as utilities for managing changes
-		require("plugins.git"),
-
-		-- add a file explorer to neovim
-		-- config of neo-tree.nvim
-		require("plugins.neo-tree"),
-
-		-- add a bufferline to neovim
-		-- config of bufferline.nvim
-		require("plugins.bufferline"),
-
-		-- replaces the UI for messages, cmdline and the popupmenu
-		-- config of noice
-		require("plugins.noice"),
-
-		-- Useful plugin to show pending keybinds.
-		require("plugins.which-key"),
-
-		-- quick move plugin
-		require("plugins.flash"),
-
-		-- Fuzzy Finder (files, lsp, etc)
-		require("plugins.telescope"),
-
-		-- used for completion, annotations and signatures of Neovim apis
-		-- config of lazydev.nvim, nvim-lspconfig, mason, mason-tool-installerm, mason-lspconfig
-		require("plugins.lsp"),
-
-		-- Autocompletion
-		-- config of nvim-cmp,
-		require("plugins.autocmp"),
-
-		-- Highlight, edit, and navigate code
-		-- config of nvim-treesitter
-		require("plugins.treesitter"),
-
-		-- Autoformat
-		-- config of conform.nvim
-		require("plugins.autoformat"),
-
-		-- Highlight todo, notes, etc in comments; convinient to add comments
-		-- config of todo-commoent.nvim
-		require("plugins.comment"),
-
-		-- Collection of various small independent plugins/modules
-		-- config of mini.nvim, setup mini.ai, mini.surround, mini.statusline
-		require("plugins.mini"),
-
-		-- Shows how to use the DAP plugin to debug your code.
-		-- config of nvim-dap
-		-- require("plugins.debug"),
-
-		-- Add indentation guides even on blank lines
-		-- config of indent-blankline.nvim
-		require("plugins.indent_line"),
-
-		-- 根据文件类型, 静态分析代码
-		-- config of nvim-lint
-		require("plugins.lint"),
-
-		-- auto pairs for parentheses '{', '[', '(', '"', "'"
-		-- config of nvim-autopairs
-		require("plugins.autopairs"),
-
-		require("plugins.copilot"),
-		require("plugins.copilot-cmp"),
-
-		require("plugins.vim-smoothie"),
-
-		require("plugins.barbecue"),
-
-		-- require("plugins.alpha-nvim"),
-
-		require("plugins.illuminate"),
-
-		require("plugins.utils"),
-
-		require("plugins.null-ls"),
-
-		require("plugins.multicursor"),
+		-- AI Plugins
+		require("plugins.ai.copilot"), -- copilot
+		require("plugins.ai.copilot-cmp"), -- copilot-cmp
 
 		-- add own plugins to `lua/custom/plugins/*.lua` to get going.
 		--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`

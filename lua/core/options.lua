@@ -63,8 +63,7 @@ Kickstart Guide:
     This should be the first place you go to look when you're stuck or confused
     with something. It's one of my favorite Neovim features.
 
-    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
-    which is very useful when you're not exactly sure of what you're looking for.
+    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,which is very useful when you're not exactly sure of what you're looking for.
 
   I have left several `:help X` comments throughout the init.lua
     These are hints about where to find more information about the relevant settings,
@@ -143,3 +142,5 @@ vim.opt.undofile = true -- Save undo history
 vim.opt.wrap = true -- Move cursor to the start/end of the line when moving past the line
 vim.opt.completeopt = { "menu", "menuone", "noselect" } -- Set completion options
 vim.opt.hlsearch = false -- Don't highlight search results
+
+-- vim: ts=2 sts=2 sw=2 et
