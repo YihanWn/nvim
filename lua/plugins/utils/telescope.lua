@@ -65,6 +65,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
 				--   mappings = {
 				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
 				--   },
+
+				-- 禁止.gitignore 过滤
 			},
 			-- pickers = {}
 			extensions = {
