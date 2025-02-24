@@ -36,6 +36,7 @@ require("lazy").setup(
 		require("plugins.ui.neo-tree"), -- add a file explorer to neovim
 		require("plugins.ui.noice"), -- replaces the UI for messages, cmdline and the popupmenu
 		require("plugins.ui.terminal"),
+		require("plugins.ui.yazi"),
 
 		-- Language Plugins
 		require("plugins.language.lsp"), -- used for completion, annotations and signatures of Neovim apis
