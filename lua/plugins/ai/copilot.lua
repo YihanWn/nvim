@@ -19,9 +19,9 @@ return {
 				keymap = {
 					jump_prev = "[[",
 					jump_next = "]]",
-					accept = "<CR>",
+					accept = "<CR>", -- Enter
 					refresh = "gr",
-					open = "<M-CR>",
+					open = "<M-CR>", -- Alt + Enter
 				},
 				layout = {
 					position = "bottom", -- | top | left | right | horizontal | vertical
@@ -34,19 +34,19 @@ return {
 				hide_during_completion = true,
 				debounce = 75,
 				keymap = {
-					accept = "<M-l>",
+					accept = "<M-l>", -- Alt + l
 					accept_word = false,
 					accept_line = false,
-					next = "<M-]>",
+					next = "<M-]>", -- Alt + ]
 					prev = "<M-[>",
-					dismiss = "<C-]>",
+					dismiss = "<C-]>", -- Ctrl + ]
 				},
 			},
-			filetypes = {
+			filetypes = { -- 设置启动 Copilot 的文件类型
 				yaml = false,
 				markdown = false,
 				help = false,
-				gitcommit = false,
+				gitcommit = true,
 				gitrebase = false,
 				hgcommit = false,
 				svn = false,

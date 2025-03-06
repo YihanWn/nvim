@@ -3,7 +3,7 @@ return {
 	version = "*",
 	event = "VeryLazy",
 	opts = {
-		open_mapping = [[<C-\>]],
+		open_mapping = [[<leader>t]],
 		direction = "float", -- vertical | horizontal | tab
 		shade_filetypes = {},
 		-- This field is only relevant if direction is set to 'vertival' or 'horizontal'
@@ -14,13 +14,13 @@ return {
 			-- see :h nvim_open_win for details on borders however
 			-- the 'curved' border is a custom border type
 			-- not natively supported but implemented in this plugin.
-			border = "double", --'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+			border = "curved", --'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
 			-- terminal size
-			width = 120,
-			height = 40,
+			-- width = 120,
+			-- height = 40,
 			-- terminal position
-			row = 5,
-			col = 30,
+			-- row = 5,
+			-- col = 30,
 			winblend = 15, -- 透明度
 			zindex = 50,
 			title_pos = "center", -- 'left' | 'center' | 'right', position of the title of the floating window
