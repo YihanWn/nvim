@@ -52,7 +52,7 @@ require("lazy").setup(
 		require("plugins.utils.comment"), -- Highlight todo, notes, etc in comments; convinient to add comments
 		require("plugins.utils.flash"), -- quick move plugin
 		require("plugins.utils.git"), -- Adds git related signs to the gutter, as well as utilities for managing changes
-		require("plugins.utils.glow"),
+		require("plugins.utils.markdown"), -- markdown
 		require("plugins.utils.illuminate"),
 		require("plugins.utils.indent_line"), -- show indent lines
 		require("plugins.utils.lastplace"), -- open the last edited position
