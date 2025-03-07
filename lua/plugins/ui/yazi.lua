@@ -31,7 +31,7 @@ return {
 	}, -- 👇 if you use `open_for_directories=true`, this is recommended
 	init = function()
 		-- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
-		-- vim.g.loaded_netrw = 1
-		vim.g.loaded_netrwPlugin = 1
+		-- vim.g.loaded_netrw = 1 -- 告诉 Vim netrw 模块已经加载，从而阻止其再次加载（或 loaded_netrwPlugin 直接禁用 netrw 的部分功能）
+		vim.g.loaded_netrwPlugin = 1 -- 禁用 netrw 插件（netrwPlugin）的相关功能，避免其自动加载和干扰其他文件管理器插件(yazi.nvim)
 	end,
 }
