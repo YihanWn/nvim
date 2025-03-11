@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Quit Fil
 vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { silent = true, desc = "Save and Quit File" })
 
 -- Neotree plugins keymaps
-vim.keymap.set("n", "<C-e>", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
 
 vim.api.nvim_set_keymap("n", "<C-S-h>", "<C-w>H", { noremap = true, silent = true }) -- 移动到左侧窗口
 vim.api.nvim_set_keymap("n", "<C-S-j>", "<C-w>J", { noremap = true, silent = true }) -- 移动到下侧窗口
@@ -48,16 +48,16 @@ vim.api.nvim_set_keymap("n", "<C-S-k>", "<C-w>K", { noremap = true, silent = tru
 vim.api.nvim_set_keymap("n", "<C-S-l>", "<C-w>L", { noremap = true, silent = true }) -- 移动到右侧窗口
 
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>sv",
-	"<cmd>vsplit<CR>",
-	{ noremap = true, silent = true, desc = "Vertical split window" }
+  "n",
+  "<leader>sv",
+  "<cmd>vsplit<CR>",
+  { noremap = true, silent = true, desc = "Vertical split window" }
 ) -- 向右分割
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>sh",
-	"<cmd>split<CR>",
-	{ noremap = true, silent = true, desc = "Horizontal split window" }
+  "n",
+  "<leader>sh",
+  "<cmd>split<CR>",
+  { noremap = true, silent = true, desc = "Horizontal split window" }
 ) -- 向下分割
 
 vim.keymap.set("n", "<C-S-Right>", "<C-w><", { noremap = true, silent = true, desc = "Decrease width" })

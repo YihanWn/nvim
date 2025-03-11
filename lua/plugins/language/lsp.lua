@@ -170,6 +170,16 @@ return {
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
 					end
+
+					-- 关闭当前缓冲区诊断提示的快捷键
+					map("<leader>dd", function()
+						vim.diagnostic.enable(false, { buffer = event.buf })
+					end, "Disable Diagnostics")
+
+					-- 开启当前缓冲区诊断提示的快捷键
+					map("<leader>de", function()
+						vim.diagnostic.enable(true, { buffer = event.buf })
+					end, "Enable Diagnostics")
 				end,
 			})
 
