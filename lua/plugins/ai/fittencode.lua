@@ -1,27 +1,27 @@
 return {
-  'luozhiya/fittencode.nvim',
+  "luozhiya/fittencode.nvim",
   opts = {
     {
       action = {
         document_code = {
           -- Show "Fitten Code - Document Code" in the editor context menu, when you right-click on the code.
-          show_in_editor_context_menu = true,
+          show_in_editor_context_menu = false,
         },
         edit_code = {
           -- Show "Fitten Code - Edit Code" in the editor context menu, when you right-click on the code.
-          show_in_editor_context_menu = true,
+          show_in_editor_context_menu = false,
         },
         explain_code = {
           -- Show "Fitten Code - Explain Code" in the editor context menu, when you right-click on the code.
-          show_in_editor_context_menu = true,
+          show_in_editor_context_menu = false,
         },
         find_bugs = {
           -- Show "Fitten Code - Find Bugs" in the editor context menu, when you right-click on the code.
-          show_in_editor_context_menu = true,
+          show_in_editor_context_menu = false,
         },
         generate_unit_test = {
           -- Show "Fitten Code - Generate UnitTest" in the editor context menu, when you right-click on the code.
-          show_in_editor_context_menu = true,
+          show_in_editor_context_menu = false,
         },
         start_chat = {
           -- Show "Fitten Code - Start Chat" in the editor context menu, when you right-click on the code.
@@ -33,7 +33,7 @@ return {
           -- * Buffer without file extension
           -- * Buffer no filetype detected
           identify_buffer = true,
-        }
+        },
       },
       disable_specific_inline_completion = {
         -- Disable auto-completion for some specific file suffixes by entering them below
@@ -71,7 +71,7 @@ return {
         --   - `Ctrl+Up` to Revoke line
         --   - Interrupt(Same as `commit`, but with the following changes:)
         --      - Characters that have already been staged will be lost.
-        accept_mode = 'commit',
+        accept_mode = "commit",
       },
       delay_completion = {
         -- Delay time for inline completion (in milliseconds).
@@ -89,7 +89,7 @@ return {
         -- Available options:
         -- * `sidebar` (Siderbar style, also default)
         -- * `floating` (Floating style)
-        style = 'sidebar',
+        style = "sidebar",
         sidebar = {
           -- Width of the sidebar in characters.
           width = 42,
@@ -97,39 +97,39 @@ return {
           -- Available options:
           -- * `left`
           -- * `right`
-          position = 'left',
+          position = "left",
         },
         floating = {
           -- Border style of the floating window.
           -- Same border values as `nvim_open_win`.
-          border = 'rounded',
+          border = "rounded",
           -- Size of the floating window.
           -- <= 1: percentage of the screen size
           -- >  1: number of lines/columns
           size = { width = 0.8, height = 0.8 },
-        }
+        },
       },
       -- Enable/Disable the default keymaps in inline completion.
       use_default_keymaps = true,
       -- Default keymaps
       keymaps = {
         inline = {
-          ['<TAB>'] = 'accept_all_suggestions',
-          ['<C-Down>'] = 'accept_line',
-          ['<C-Right>'] = 'accept_word',
-          ['<C-Up>'] = 'revoke_line',
-          ['<C-Left>'] = 'revoke_word',
-          ['<A-\\>'] = 'triggering_completion',
+          ["<TAB>"] = "accept_all_suggestions",
+          ["<C-Down>"] = "accept_line",
+          ["<C-Right>"] = "accept_word",
+          ["<C-Up>"] = "revoke_line",
+          ["<C-Left>"] = "revoke_word",
+          ["<A-\\>"] = "triggering_completion",
         },
         chat = {
-          ['q'] = 'close',
-          ['[c'] = 'goto_previous_conversation',
-          [']c'] = 'goto_next_conversation',
-          ['c'] = 'copy_conversation',
-          ['C'] = 'copy_all_conversations',
-          ['d'] = 'delete_conversation',
-          ['D'] = 'delete_all_conversations',
-        }
+          ["q"] = "close",
+          ["[c"] = "goto_previous_conversation",
+          ["]c"] = "goto_next_conversation",
+          ["c"] = "copy_conversation",
+          ["C"] = "copy_all_conversations",
+          ["d"] = "delete_conversation",
+          ["D"] = "delete_all_conversations",
+        },
       },
       -- Setting for source completion.
       source_completion = {
@@ -147,7 +147,7 @@ return {
       -- Available options:
       -- * 'inline' (VSCode style inline completion)
       -- * 'source' (integrates into other completion plugins)
-      completion_mode = 'inline',
+      completion_mode = "inline",
       ---@class LogOptions
       log = {
         -- Log level.
@@ -155,7 +155,6 @@ return {
         -- Max log file size in MB, default is 10MB
         max_size = 10,
       },
-    }
-
+    },
   },
 }
