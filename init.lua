@@ -77,7 +77,8 @@ else
     -- AI Plugins
     -- require("plugins.ai.copilot"), -- copilot
     -- require("plugins.ai.copilot-cmp"), -- copilot-cmp
-    require("plugins.ai.codeium"), -- codeium
+    -- require("plugins.ai.codeium"), -- codeium
+    require("plugins.ai.fittencode"), -- fittencode
 
     -- add own plugins to `lua/custom/plugins/*.lua` to get going.
     --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`

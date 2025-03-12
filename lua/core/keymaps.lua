@@ -37,7 +37,7 @@ vim.keymap.set("n", "<S-K>", '<cmd>call smoothie#do("<C-U>")<CR>', { noremap = t
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { silent = true, desc = "Save File" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Quit File" })
-vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { silent = true, desc = "Save and Quit File" })
+-- vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { silent = true, desc = "Save and Quit File" })
 
 -- Neotree plugins keymaps
 vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
