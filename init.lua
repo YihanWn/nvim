@@ -75,7 +75,6 @@ else
     require("plugins.utils.persistence"), -- keep nvim state
     -- require("plugins.utils.spelunker"), -- spell check
     require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
-    not vim.g.neovide and require("plugins.utils.vim-smoothie") or nil, -- neovide 使用 vim-smoothie 有bug，而且neovide 自带平滑滚动
     require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
     -- require("plugins.utils.window-picker"), -- quick move between windows
 
@@ -89,6 +88,10 @@ else
     --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
     -- { import = "custom.plugins" },
   }
+  -- 仅在非 neovide 环境下插入 vim-smoothie 插件（避免 nil 项）
+  if not vim.g.neovide then
+    table.insert(plugins, require("plugins.utils.vim-smoothie")) -- neovide 使用 vim-smoothie 有bug，而且neovide 自带平滑滚动
+  end
 end
 
 -- [[ Configure and install plugins ]]
