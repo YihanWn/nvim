@@ -7,6 +7,11 @@ require("core.keymaps")
 -- [[ vim auto commands ]]
 require("core.autocmds")
 
+-- [[ neovide configuration ]]
+if vim.g.neovide then
+  require("core.neovide")
+end
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -70,7 +75,7 @@ else
     require("plugins.utils.persistence"), -- keep nvim state
     -- require("plugins.utils.spelunker"), -- spell check
     require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
-    require("plugins.utils.vim-smoothie"), -- Smooth scrolling
+    not vim.g.neovide and require("plugins.utils.vim-smoothie") or nil, -- neovide 使用 vim-smoothie 有bug，而且neovide 自带平滑滚动
     require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
     -- require("plugins.utils.window-picker"), -- quick move between windows
 

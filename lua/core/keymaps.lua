@@ -32,8 +32,13 @@ vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { silent = true, desc = "Move
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { silent = true, desc = "Move focus to the next buffer" })
 
 -- Manually define smooth scrolling key mappings
-vim.keymap.set("n", "<S-J>", '<cmd>call smoothie#do("<C-D>")<CR>', { noremap = true, silent = true })
-vim.keymap.set("n", "<S-K>", '<cmd>call smoothie#do("<C-U>")<CR>', { noremap = true, silent = true })
+if not vim.g.neovide then
+  vim.keymap.set("n", "<S-J>", '<cmd>call smoothie#do("<C-D>")<CR>', { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-K>", '<cmd>call smoothie#do("<C-U>")<CR>', { noremap = true, silent = true })
+else
+  vim.keymap.set("n", "<S-J>", "<C-d>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-K>", "<C-u>", { noremap = true, silent = true })
+end
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { silent = true, desc = "Save File" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Quit File" })
