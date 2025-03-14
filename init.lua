@@ -41,7 +41,7 @@ else
     "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
     -- UI Plugins
-    -- require("plugins.ui.alpha-nvim"), -- UI for neovim
+    require("plugins.ui.alpha-nvim"), -- UI for neovim
     require("plugins.ui.barbecue"), -- show cursor position in the statusline
     require("plugins.ui.bufferline"), -- add a bufferline to neovim
     require("plugins.ui.colorscheme"), -- config of theme: tokyonight, gruvbox, cobalt2
