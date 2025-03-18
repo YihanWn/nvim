@@ -45,7 +45,6 @@ local plugins = {
   require("plugins.language.lint"), -- Linting and fixing code
 
   -- Utils Plugins
-  -- require("plugins.utils.accelerated"), -- Accelerated JK motions
   require("plugins.utils.autopairs"), -- auto pairs for parentheses '{', '[', '(', '"', "'"
   require("plugins.utils.comment"), -- Highlight todo, notes, etc in comments; convinient to add comments
   require("plugins.utils.flash"), -- quick move plugin
@@ -56,10 +55,8 @@ local plugins = {
   require("plugins.utils.mini"), -- Collection of various small independent plugins/modules
   require("plugins.utils.multicursor"), -- multiple cursors
   require("plugins.utils.persistence"), -- keep nvim state
-  -- require("plugins.utils.spelunker"), -- spell check
   require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
   require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
-  -- require("plugins.utils.window-picker"), -- quick move between windows
   require("plugins.utils.snacks"),
 
   -- AI Plugins
@@ -72,10 +69,6 @@ local plugins = {
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = "custom.plugins" },
 }
--- 仅在非 neovide 环境下插入 vim-smoothie 插件（避免 nil 项）
-if not vim.g.neovide then
-  table.insert(plugins, require("plugins.utils.vim-smoothie")) -- neovide 使用 vim-smoothie 有bug，而且neovide 自带平滑滚动
-end
 
 -- [[ Configure and install plugins ]]
 -- 插件配置方法查阅文档 https://lazy.folke.io/spec
