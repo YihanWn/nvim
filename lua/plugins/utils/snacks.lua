@@ -16,13 +16,13 @@ return {
     terminal = require("plugins.utils.snacks_config.terminal"),
     zen = require("plugins.utils.snacks_config.zen"),
     notifier = require("plugins.utils.snacks_config.notifier"),
+    scroll = require("plugins.utils.snacks_config.scroll"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     -- notifier = {
     --   enabled = true,
     --   timeout = 3000, -- default timeout in ms
     -- },
     -- picker = { enabled = true },
     -- scope = { enabled = true },
-    -- scroll = { enabled = true }, -- 平滑滚动，不需要使用 vim-smoothie 插件
     -- statuscolumn = { enabled = true },
     -- words = { enabled = true },
     -- styles = {
