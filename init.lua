@@ -29,7 +29,6 @@ local plugins = {
   "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
   -- UI Plugins
-  require("plugins.ui.alpha-nvim"), -- UI for neovim
   require("plugins.ui.barbecue"), -- show cursor position in the statusline
   require("plugins.ui.bufferline"), -- add a bufferline to neovim
   require("plugins.ui.colorscheme"), -- config of theme: tokyonight, gruvbox, cobalt2
@@ -66,6 +65,7 @@ local plugins = {
   require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
   require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
   -- require("plugins.utils.window-picker"), -- quick move between windows
+  require("plugins.utils.snacks"),
 
   -- AI Plugins
   -- require("plugins.ai.copilot"), -- copilot
