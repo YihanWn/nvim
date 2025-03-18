@@ -36,8 +36,8 @@ if not vim.g.neovide then
   vim.keymap.set("n", "<S-J>", '<cmd>call smoothie#do("<C-D>")<CR>', { noremap = true, silent = true })
   vim.keymap.set("n", "<S-K>", '<cmd>call smoothie#do("<C-U>")<CR>', { noremap = true, silent = true })
 else
-  vim.keymap.set("n", "<S-J>", "<C-d>", { noremap = true, silent = true })
-  vim.keymap.set("n", "<S-K>", "<C-u>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-J>", '<C-d>', { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-K>", '<C-u>', { noremap = true, silent = true })
 end
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { silent = true, desc = "Save File" })
