@@ -34,7 +34,6 @@ local plugins = {
   require("plugins.ui.colorscheme"), -- config of theme: tokyonight, gruvbox, cobalt2
   require("plugins.ui.lualine"), -- add a statusline to neovim
   require("plugins.ui.noice"), -- replaces the UI for messages, cmdline and the popupmenu
-  require("plugins.ui.terminal"),
   require("plugins.ui.yazi"),
   require("plugins.ui.zen-mode"),
 
@@ -53,9 +52,7 @@ local plugins = {
   require("plugins.utils.flash"), -- quick move plugin
   require("plugins.utils.git"), -- Adds git related signs to the gutter, as well as utilities for managing changes
   require("plugins.utils.markdown"), -- markdown
-  -- require("plugins.utils.accelerated"), -- Accelerated JK motions
   require("plugins.utils.illuminate"), -- highlight same words
-  require("plugins.utils.indent_line"), -- show indent lines
   require("plugins.utils.lastplace"), -- open the last edited position
   require("plugins.utils.mini"), -- Collection of various small independent plugins/modules
   require("plugins.utils.multicursor"), -- multiple cursors

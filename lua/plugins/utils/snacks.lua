@@ -14,6 +14,7 @@ return {
     indent = { enabled = true },
     gitbrowse = require("plugins.utils.snacks_config.gitbrowse"),
     lazygit = require("plugins.utils.snacks_config.lazygit"),
+    terminal = require("plugins.utils.snacks_config.terminal"),
     -- input = { enabled = true },
     -- notifier = {
     --   enabled = false,
@@ -39,5 +40,7 @@ return {
     { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
     { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+
+    { "<leader>t",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
   },
 }
