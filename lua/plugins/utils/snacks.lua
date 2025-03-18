@@ -7,6 +7,10 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true }, -- 阻止 lsp，treesitter attch 大文件 buffer
+    ---@class snacks.dashboard.Config
+    ---@field enabled? boolean
+    ---@field sections snacks.dashboard.Section
+    ---@field formats table<string, snacks.dashboard.Text|fun(item:snacks.dashboard.Item, ctx:snacks.dashboard.Format.ctx):snacks.dashboard.Text>
     dashboard = {
       enabled = true,
       width = 60,
@@ -84,8 +88,10 @@ return {
         { section = "startup" },
       }, -- item field formatters
     },
-    -- explorer = { enabled = true },
-    -- indent = { enabled = true },
+    explorer = {
+      enabled = true,
+    },
+    indent = { enabled = true },
     -- input = { enabled = true },
     -- notifier = {
     --   enabled = false,
@@ -102,5 +108,14 @@ return {
     --     -- wo = { wrap = true } -- Wrap notifications
     --   },
     -- },
+    keys = {
+      {
+        "<leader>e",
+        function()
+          Snacks.explorer()
+        end,
+        desc = "File Explorer",
+      },
+    },
   },
 }

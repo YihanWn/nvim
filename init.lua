@@ -33,7 +33,6 @@ local plugins = {
   require("plugins.ui.bufferline"), -- add a bufferline to neovim
   require("plugins.ui.colorscheme"), -- config of theme: tokyonight, gruvbox, cobalt2
   require("plugins.ui.lualine"), -- add a statusline to neovim
-  require("plugins.ui.neo-tree"), -- add a file explorer to neovim
   require("plugins.ui.noice"), -- replaces the UI for messages, cmdline and the popupmenu
   require("plugins.ui.terminal"),
   require("plugins.ui.yazi"),

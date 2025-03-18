@@ -36,8 +36,8 @@ if not vim.g.neovide then
   vim.keymap.set("n", "<S-J>", '<cmd>call smoothie#do("<C-D>")<CR>', { noremap = true, silent = true })
   vim.keymap.set("n", "<S-K>", '<cmd>call smoothie#do("<C-U>")<CR>', { noremap = true, silent = true })
 else
-  vim.keymap.set("n", "<S-J>", '<C-d>', { noremap = true, silent = true })
-  vim.keymap.set("n", "<S-K>", '<C-u>', { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-J>", "<C-d>", { noremap = true, silent = true })
+  vim.keymap.set("n", "<S-K>", "<C-u>", { noremap = true, silent = true })
 end
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { silent = true, desc = "Save File" })
@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Quit Fil
 -- vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { silent = true, desc = "Save and Quit File" })
 
 -- Neotree plugins keymaps
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
+-- vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
 
 vim.api.nvim_set_keymap("n", "<C-S-h>", "<C-w>H", { noremap = true, silent = true }) -- 移动到左侧窗口
 vim.api.nvim_set_keymap("n", "<C-S-j>", "<C-w>J", { noremap = true, silent = true }) -- 移动到下侧窗口
