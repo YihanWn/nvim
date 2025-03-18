@@ -7,21 +7,20 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true }, -- 阻止 lsp，treesitter attch 大文件 buffer
-    dashboard = require("plugins.utils.snacks_config.dashboard"),
-    explorer = {
-      enabled = true,
-    },
+    explorer = { enabled = true },
     indent = { enabled = true },
+    quickfile = { enabled = true }, -- render file before plugins loading
+    dashboard = require("plugins.utils.snacks_config.dashboard"),
     gitbrowse = require("plugins.utils.snacks_config.gitbrowse"),
     lazygit = require("plugins.utils.snacks_config.lazygit"),
     terminal = require("plugins.utils.snacks_config.terminal"),
     zen = require("plugins.utils.snacks_config.zen"),
+    notifier = require("plugins.utils.snacks_config.notifier"),
     -- notifier = {
-    --   enabled = false,
-    --   timeout = 3000,
+    --   enabled = true,
+    --   timeout = 3000, -- default timeout in ms
     -- },
     -- picker = { enabled = true },
-    -- quickfile = { enabled = true },
     -- scope = { enabled = true },
     -- scroll = { enabled = true }, -- 平滑滚动，不需要使用 vim-smoothie 插件
     -- statuscolumn = { enabled = true },
@@ -42,8 +41,10 @@ return {
     { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
 
-    { "<leader>t",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
+    { "<leader>t", function() Snacks.terminal() end, desc = "Toggle Terminal" },
 
-    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
+    { "<leader>z", function() Snacks.zen() end, desc = "Toggle Zen Mode" },
+
+    { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Notification History" },
   },
 }
