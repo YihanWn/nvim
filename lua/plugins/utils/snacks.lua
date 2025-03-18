@@ -15,7 +15,7 @@ return {
     gitbrowse = require("plugins.utils.snacks_config.gitbrowse"),
     lazygit = require("plugins.utils.snacks_config.lazygit"),
     terminal = require("plugins.utils.snacks_config.terminal"),
-    -- input = { enabled = true },
+    zen = require("plugins.utils.snacks_config.zen"),
     -- notifier = {
     --   enabled = false,
     --   timeout = 3000,
@@ -31,6 +31,7 @@ return {
     --     -- wo = { wrap = true } -- Wrap notifications
     --   },
     -- },
+    input = { enabled = false }, -- notice.nvim 插件提供更优的 cmdline, vim.ui.input 交互
   },
   -- stylua: ignore
   keys = {
@@ -42,5 +43,7 @@ return {
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
 
     { "<leader>t",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
+
+    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
   },
 }

@@ -35,7 +35,6 @@ local plugins = {
   require("plugins.ui.lualine"), -- add a statusline to neovim
   require("plugins.ui.noice"), -- replaces the UI for messages, cmdline and the popupmenu
   require("plugins.ui.yazi"),
-  require("plugins.ui.zen-mode"),
 
   -- Language Plugins
   require("plugins.language.lsp"), -- used for completion, annotations and signatures of Neovim apis
