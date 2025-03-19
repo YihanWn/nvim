@@ -1,6 +1,5 @@
 -- NOTE: LSP
 -- lazydev: managing and loading plugins lazily for improved startup performance
--- luvit-meta: managing Luvit (a Lua-based framework) configurations and dependencies
 -- nvim-lspconfig: Neovim built-in LSP client
 -- mason: managing and installing tools(LSP, Linter, Formatter et) for Neovim
 -- mason-lspconfig: Integrates mason with nvim-lspconfig to automatically install and configure LSP servers
@@ -19,11 +18,10 @@ return {
     opts = {
       library = {
         -- Load luvit types when the `vim.uv` word is found
-        { path = "luvit-meta/library", words = { "vim%.uv" } },
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
       },
     },
   },
-  { "Bilal2453/luvit-meta", lazy = true },
   {
     -- Main LSP Configuration
     "neovim/nvim-lspconfig",
@@ -34,7 +32,7 @@ return {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
 
       "folke/neoconf.nvim",
-      "nvimdev/lspsaga.nvim",
+      -- "nvimdev/lspsaga.nvim",
 
       -- LSP status indicator (replaced by snacks notifier + audocmd LspProgress)
       -- { "j-hui/fidget.nvim", opts = {} },  -- opts = {}` is the same as calling `require('fidget').setup({})`
@@ -231,7 +229,7 @@ return {
         },
       }
 
-      require("lspsaga").setup()
+      -- require("lspsaga").setup()
 
       -- NOTE: setup before lspconfig
       require("neoconf").setup()
