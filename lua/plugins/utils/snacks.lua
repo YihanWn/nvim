@@ -10,6 +10,7 @@ return {
     explorer = { enabled = true },
     indent = { enabled = true },
     quickfile = { enabled = true }, -- render file before plugins loading
+
     dashboard = require("plugins.utils.snacks_config.dashboard"),
     gitbrowse = require("plugins.utils.snacks_config.gitbrowse"),
     lazygit = require("plugins.utils.snacks_config.lazygit"),
@@ -18,10 +19,11 @@ return {
     notifier = require("plugins.utils.snacks_config.notifier"),
     scroll = require("plugins.utils.snacks_config.scroll"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     statuscolumn = require("plugins.utils.snacks_config.statuscolumn"), -- 平滑滚动，不需要使用 vim-smoothie 插件
-    toggle = { enabled = true }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     picker = require("plugins.utils.snacks_config.picker"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     scope = require("plugins.utils.snacks_config.scope"), -- Scope detection, text objects and jumping based on treesitter or indent
-    words = { enabled = true }, -- Auto-show LSP references and quickly navigate between them
+
+    toggle = { enabled = false },
+    words = { enabled = false }, -- Auto-show LSP references and quickly navigate between them
     profiler = { enabled = false }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     input = { enabled = false }, -- notice.nvim 插件提供更优的 cmdline, vim.ui.input 交互
   },
@@ -53,8 +55,8 @@ return {
     { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
     -- git
     { "<leader>gf", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
-    { "<leader>gb", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
-    { "<leader>gB", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
+    { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
+    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
     { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
     { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
     { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
