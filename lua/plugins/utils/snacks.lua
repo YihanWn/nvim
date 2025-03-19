@@ -20,8 +20,8 @@ return {
     statuscolumn = require("plugins.utils.snacks_config.statuscolumn"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     toggle = { enabled = true }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     picker = require("plugins.utils.snacks_config.picker"), -- 平滑滚动，不需要使用 vim-smoothie 插件
-    -- scope = { enabled = true },
-    -- words = { enabled = true },
+    scope = require("plugins.utils.snacks_config.scope"), -- Scope detection, text objects and jumping based on treesitter or indent
+    words = { enabled = true }, -- Auto-show LSP references and quickly navigate between them
     profiler = { enabled = false }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     input = { enabled = false }, -- notice.nvim 插件提供更优的 cmdline, vim.ui.input 交互
   },
