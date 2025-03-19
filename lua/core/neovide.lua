@@ -1,8 +1,5 @@
 -- text below applies for VimScript
-vim.o.guifont = "Source Code Pro:h15"
-
--- 全屏模式
-vim.g.neovide_fullscreen = true
+vim.o.guifont = "Source Code Pro:h16"
 
 -- 位置动画时长
 vim.g.neovide_position_animation_length = 0.15
