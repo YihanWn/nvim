@@ -1,11 +1,16 @@
 -- NOTE: move message to top
 -- noice
+-- cmdline
+-- lsp status 右下角lsp进度显示会将光标移动到右下角，这里将其关闭，使用 snacks notifier 工具 + autocmd 显示 LSP 进度
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
     -- add any options here
     lsp = {
+      progress = {
+        enabled = false, -- 关闭 LSP 进度显示
+      },
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
