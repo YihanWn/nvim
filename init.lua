@@ -55,7 +55,6 @@ local plugins = {
   require("plugins.utils.mini"), -- Collection of various small independent plugins/modules
   require("plugins.utils.multicursor"), -- multiple cursors
   require("plugins.utils.persistence"), -- keep nvim state
-  require("plugins.utils.telescope"), -- Fuzzy Finder (files, lsp, etc)
   require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
   require("plugins.utils.snacks"),
 
