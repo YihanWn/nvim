@@ -36,9 +36,8 @@ return {
       "folke/neoconf.nvim",
       "nvimdev/lspsaga.nvim",
 
-      -- Useful status updates for LSP.
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      -- { "j-hui/fidget.nvim", opts = {} },
+      -- LSP status indicator (replaced by snacks notifier + audocmd LspProgress)
+      -- { "j-hui/fidget.nvim", opts = {} }, -- opts = {}` is the same as calling `require('fidget').setup({})`
 
       -- Allows extra capabilities provided by nvim-cmp
       "hrsh7th/cmp-nvim-lsp",

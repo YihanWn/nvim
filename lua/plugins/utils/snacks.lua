@@ -2,7 +2,7 @@
 --
 return {
   "folke/snacks.nvim",
-  priority = 1000,
+  priority = 1,
   lazy = false,
   ---@type snacks.Config
   opts = {
@@ -17,10 +17,12 @@ return {
     zen = require("plugins.utils.snacks_config.zen"),
     notifier = require("plugins.utils.snacks_config.notifier"),
     scroll = require("plugins.utils.snacks_config.scroll"), -- 平滑滚动，不需要使用 vim-smoothie 插件
+    statuscolumn = { enabled = true },
+    toggle = { enabled = true }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     -- picker = { enabled = true },
     -- scope = { enabled = true },
-    -- statuscolumn = { enabled = true },
     -- words = { enabled = true },
+    profiler = { enabled = false }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     input = { enabled = false }, -- notice.nvim 插件提供更优的 cmdline, vim.ui.input 交互
   },
   -- stylua: ignore
@@ -37,5 +39,7 @@ return {
     { "<leader>z", function() Snacks.zen() end, desc = "Toggle Zen Mode" },
 
     { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Notification History" },
+
+    -- { "<leader>ps", function() Snacks.profiler.scratch() end, desc = "Profiler Scratch Bufer" },
   },
 }
