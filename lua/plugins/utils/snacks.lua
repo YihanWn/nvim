@@ -17,7 +17,7 @@ return {
     zen = require("plugins.utils.snacks_config.zen"),
     notifier = require("plugins.utils.snacks_config.notifier"),
     scroll = require("plugins.utils.snacks_config.scroll"), -- 平滑滚动，不需要使用 vim-smoothie 插件
-    statuscolumn = { enabled = true },
+    statuscolumn = require("plugins.utils.snacks_config.statuscolumn"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     toggle = { enabled = true }, -- require("plugins.utils.snacks_config.profiler"), -- 性能分析
     picker = require("plugins.utils.snacks_config.picker"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     -- scope = { enabled = true },
@@ -44,6 +44,8 @@ return {
     { "<leader>sR", function() Snacks.picker.resume() end, desc = "Resume" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
     { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
+    { "<leader>st", function() Snacks.picker.todo_comments() end, desc = "Todo" },
+    { "<leader>sT", function () Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc = "Todo/Fix/Fixme" },
     -- Grep
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
     { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
