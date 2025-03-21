@@ -5,10 +5,10 @@ return {
   -- Toggle config options are NOT merged.
   ---@type table<string, boolean>
   toggles = {
-    dim = true,
+    dim = false, -- 只高亮 光标所在的 textobject
     git_signs = false,
     mini_diff_signs = false,
-    -- diagnostics = false,
+    diagnostics = false,
     -- inlay_hints = false,
   },
   show = {
