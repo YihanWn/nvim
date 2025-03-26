@@ -8,12 +8,13 @@
 ---@field override? fun(cmd?: string|string[], opts?: snacks.terminal.Opts) Use this to use a different terminal implementation
 return {
   win = {
-    style = {
-      position = "float",
-      backdrop = 60,
-      height = 0.9,
-      width = 0.9,
-      zindex = 50,
-    },
+    style = "terminal",
+    -- style = {
+    --   position = "float",
+    --   backdrop = 60,
+    --   height = 0.9,
+    --   width = 0.9,
+    --   zindex = 50,
+    -- },
   },
 }

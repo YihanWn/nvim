@@ -18,7 +18,7 @@ return {
     zen = require("plugins.utils.snacks_config.zen"),
     notifier = require("plugins.utils.snacks_config.notifier"),
     scroll = require("plugins.utils.snacks_config.scroll"), -- 平滑滚动，不需要使用 vim-smoothie 插件
-    statuscolumn = require("plugins.utils.snacks_config.statuscolumn"), -- 平滑滚动，不需要使用 vim-smoothie 插件
+    -- statuscolumn = require("plugins.utils.snacks_config.statuscolumn"),
     picker = require("plugins.utils.snacks_config.picker"), -- 平滑滚动，不需要使用 vim-smoothie 插件
     scope = require("plugins.utils.snacks_config.scope"), -- Scope detection, text objects and jumping based on treesitter or indent
 
