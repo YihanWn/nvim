@@ -1,5 +1,5 @@
 -- text below applies for VimScript
-vim.o.guifont = "Source Code Pro:h15"
+vim.o.guifont = "JetBrainsMono Nerd Font:h15"
 
 -- 全屏模式
 vim.g.neovide_fullscreen = true
@@ -14,7 +14,7 @@ vim.g.neovide_scroll_animation_length = 0.3
 vim.g.neovide_scroll_animation_far_lines = 1
 
 -- 窗口透明度
-vim.g.neovide_transparency = 1
+vim.g.neovide_opacity= 1
 
 -- 记住之前的窗口大小
 vim.g.neovide_remember_window_size = true

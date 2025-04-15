@@ -246,7 +246,13 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {}) -- 获取 servers table 中的所有 key, 也就是所有的 LSP server
       vim.list_extend(ensure_installed, {
-        "stylua", -- Used to format Lua code
+        -- "clangd", -- C/C++ LSP
+        -- "pyright", -- Python LSP
+        -- "lua_ls",  -- lua LSP
+
+        "clang-format", -- C/C++ formatter
+        "black", -- Python formatter
+        "stylua", -- lua formatter
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
