@@ -24,3 +24,6 @@ vim.g.neovide_touch_deadzone = 1.0
 
 -- 光标动画时长
 vim.g.neovide_cursor_animation_length = 0.05
+
+-- neovide 中将 Option 键视为 Meta 键
+vim.g.neovide_input_macos_option_key_is_meta = "only_left"

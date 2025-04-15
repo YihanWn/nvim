@@ -56,6 +56,7 @@ return { -- Autoformat
     config = function()
       -- 告诉 mason 安装那些 lint, formater 工具
       local tools = {
+        "clang-format", -- C/C++ formatter
         "black", -- Python formatter
         "stylua", -- lua formatter
       }

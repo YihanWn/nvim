@@ -1,20 +1,14 @@
 -- NOTE: multi cursor plugin
--- multicursors
+-- visual-multi plugins
+-- see :help visual-multi-maps for more mappings
 
 return {
-	"smoka7/multicursors.nvim",
-	event = "VeryLazy",
-	dependencies = {
-		"nvimtools/hydra.nvim",
-	},
-	opts = {},
-	cmd = { "MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor" },
-	keys = {
-		{
-			mode = { "v", "n" },
-			"<Leader>m",
-			"<cmd>MCstart<cr>",
-			desc = "Create a selection for selected text or word under the cursor",
-		},
-	},
+  "mg979/vim-visual-multi",
+  init = function()
+    vim.g.VM_maps = {
+      ["Find Under"] = "<C-n>",
+      ["Add Cursor Down"] = "<C-A-j>",
+      ["Add Cursor Up"] = "<C-A-k>",
+    }
+  end,
 }
