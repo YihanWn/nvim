@@ -6,8 +6,10 @@
 -- NOTE: normal model keymaps
 
 -- Move cursor logically
-vim.keymap.set({ "n", "v" }, "j", "gj", { desc = "cursor move logically down" })
-vim.keymap.set({ "n", "v" }, "k", "gk", { desc = "cursor move logically up" })
+vim.keymap.set({ "n", "v" }, "j", "gj", { desc = "Cursor move logically down" })
+vim.keymap.set({ "n", "v" }, "k", "gk", { desc = "Cursor move logically up" })
+
+vim.keymap.set("n", "<leader>y", "<cmd>%yank<CR>", { desc = "Yank all text" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
