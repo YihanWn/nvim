@@ -5,11 +5,9 @@
 
 -- NOTE: normal model keymaps
 
--- TIP: Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+-- Move cursor logically
+vim.keymap.set({ "n", "v" }, "j", "gj", { desc = "cursor move logically down" })
+vim.keymap.set({ "n", "v" }, "k", "gk", { desc = "cursor move logically up" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -18,9 +16,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -37,9 +32,6 @@ vim.keymap.set("n", "<S-K>", "<C-u>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { silent = true, desc = "Save File" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { silent = true, desc = "Quit File" })
 -- vim.keymap.set("n", "<leader>wq", "<cmd>wq<CR>", { silent = true, desc = "Save and Quit File" })
-
--- Neotree plugins keymaps
--- vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true, desc = "Toggle neotree" })
 
 vim.api.nvim_set_keymap("n", "<C-S-h>", "<C-w>H", { noremap = true, silent = true }) -- 移动到左侧窗口
 vim.api.nvim_set_keymap("n", "<C-S-j>", "<C-w>J", { noremap = true, silent = true }) -- 移动到下侧窗口
@@ -82,6 +74,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true, de
 -- )
 
 -- NOTE: terminal mode keymaps
+
+-- TODO: Add more terminal mode keymaps here
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
