@@ -162,6 +162,8 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       --
       local servers = {
+
+        -- c/c++
         clangd = {
           keys = {
             { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
@@ -198,6 +200,12 @@ return {
           },
         },
         -- gopls = {},
+
+        -- verilog
+        -- svls = {},
+        -- hdl_checker = {},
+
+        -- python
         pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -209,6 +217,7 @@ return {
         -- ts_ls = {},
         --
 
+        -- lua
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},

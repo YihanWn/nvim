@@ -32,6 +32,7 @@ return { -- Highlight, edit, and navigate code
       "vim",
       "vimdoc",
       "python",
+      "verilog",
     },
     -- ensure_installed = "all",
     -- Autoinstall languages that are not installed
