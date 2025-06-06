@@ -57,6 +57,7 @@ local plugins = {
   require("plugins.utils.persistence"), -- keep nvim state
   require("plugins.utils.which-key"), -- Useful plugin to show pending keybinds.
   require("plugins.utils.snacks"),
+  require("plugins.utils.surround"),
 
   -- AI Plugins
   -- require("plugins.ai.copilot"), -- copilot
