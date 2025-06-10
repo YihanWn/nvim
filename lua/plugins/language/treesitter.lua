@@ -9,7 +9,7 @@ return { -- Highlight, edit, and navigate code
     "nvim-treesitter/playground",
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
-  build = ":TSUpdate", -- 每次更新插件时运行的命令, 用于更  -- 用于 windows 下手动编译 parser, 而不是下载预编译的 parser
+  build = ":TSUpdate", -- 更新 parser
   -- 用于 windows 下手动编译 parser, 而不是下载预编译的 parser
   -- init = function()
   --   require("nvim-treesitter.install").compilers = { "clang", "gcc" }
