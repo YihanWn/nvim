@@ -100,6 +100,14 @@ require("lazy").setup(
   }
 )
 
+vim.api.nvim_create_user_command('ReloadConfig', function()
+  -- 1. 重新 source 顶层配置，加载新的 keymaps/autocmds/全局变量等
+  vim.cmd('source ' .. vim.fn.stdpath('config') .. '/init.lua')
+  -- 2. 全局重载所有 plugin-spec（不触发安装/卸载/升级）
+  require('lazy').reload()
+  print('⚡️ Neovim configuration and plugins reloaded!')
+end, { desc = 'Reload Neovim config (source + lazy.reload())' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- 在注释中就可以设置, ts:标签宽度2个空格, sts: tab 2个空格, sw: 换行缩进两个空格, et: 空格代表制表符
 -- vim: ts=2 sts=2 sw=2 et

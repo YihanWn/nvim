@@ -15,13 +15,6 @@ return {
         highlight = { label = "@flashLabel" },
         label = { after = { 0, 0 } },
         multi_line = false,
-        search = {
-          -- 这里不需要额外配置
-        },
-      },
-      -- 如果你还用到了 flash.nvim 的 search 模式（按 / 或者 ? 时触发的那种），可以按需保留：
-      search = {
-        enabled = true,
       },
     },
   },
